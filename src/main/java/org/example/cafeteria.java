@@ -11,12 +11,14 @@ import java.util.List;
         private String direccion;
         private String redesSociales;
         private List<cafe> listaCafes;
+        private List<productos> listaProductos;
 
         public cafeteria(String nombre, String direccion, String redesSociales) {
             this.nombre = nombre;
             this.direccion = direccion;
             this.redesSociales = redesSociales;
             this.listaCafes = new ArrayList<>();
+            this.listaProductos= new ArrayList<>();
         }
 
         // Getters y setters
@@ -73,6 +75,15 @@ import java.util.List;
                 }
             }
             return null;
+        }
+        public void agregarProducto(productos producto){
+            listaProductos.add(producto);
+        }
+        public void eliminarProducto(productos producto){
+            listaProductos.remove(producto);
+        }
+        public List<productos> getListaProductos(){
+            return listaProductos;
         }
     }
 

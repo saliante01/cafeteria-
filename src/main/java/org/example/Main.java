@@ -15,6 +15,29 @@ public class Main {
         cafeteria.agregarCafe(cafe2);
         cafeteria.agregarCafe(cafe3);
 
+        //crear instancias de productos
+
+        productos producto1 = new productos("Alfajores");
+        productos producto2= new productos("té");
+
+        //agregar productos a la lista en la cafeteria
+         cafeteria.agregarProducto(producto1);
+         cafeteria.agregarProducto(producto2);
+        //agregar un nuevo producto
+        productos producto3= new productos("berlines");
+        cafeteria.agregarProducto(producto3);
+
+        System.out.println("Productos disponibles despues de agregar uno nuevo");
+        for(productos producto: cafeteria.getListaProductos()){
+            System.out.println(producto.getNombre());
+        }
+        //eliminar un producto existente
+        cafeteria.eliminarProducto(producto2);
+
+        System.out.println("Productos disponibles después de eliminar uno:");
+        for (productos producto : cafeteria.getListaProductos()) {
+            System.out.println(producto.getNombre());
+        }
         // Mostrar el menú de la cafetería
         System.out.println("Menú de la Cafetería " + cafeteria.getNombre() + ":");
         for (cafe cafe : cafeteria.getListaCafes()) {
@@ -40,6 +63,10 @@ public class Main {
         } else {
             System.out.println("\nNo se encontró ningún café de tamaño " + tamañoBuscado);
         }
+        //mostar informacion de micafeteria
+        System.out.println("Nombre de la cafetería: " + cafeteria.getNombre());
+        System.out.println("Dirección: " + cafeteria.getDireccion());
+        System.out.println("Redes sociales: " + cafeteria.getRedesSociales());
     }
 }
 
