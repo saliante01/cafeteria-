@@ -68,6 +68,8 @@ public class Main {
         System.out.println("Dirección: " + cafeteria.getDireccion());
         System.out.println("Redes sociales: " + cafeteria.getRedesSociales());
     }
+
+
 }
 
 

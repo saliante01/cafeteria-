@@ -28,3 +28,6 @@ buscar cafe en la lista de cafe a la venta por su tamaño
 
 se agrega la clase productos, ademas se agrega el uml con el diagrama de clases 
 
+el menu no esta trabajando de forma correcta , pero las clases se encuentran funcionales 
+la clase main se hizo como test para probar las clases solamente 
+
